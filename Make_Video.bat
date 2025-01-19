@@ -1,0 +1,1 @@
+Powershell.exe -File .\m.ps1
