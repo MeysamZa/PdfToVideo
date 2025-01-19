@@ -3,11 +3,11 @@ Sort-Object -Property LastWriteTime -Descending |
 Select-Object -Skip 1 |
 Remove-Item -Force 
 
-Get-ChildItem *.pdf | Rename-Item -NewName 1.pdf
+Get-ChildItem *.pdf | Rename-Item -NewName Input.pdf
 
 Remove-Item -Force *.png
 
-magick -density 300 1.pdf out%03d.png
+magick -density 300 Input.pdf out%03d.png
 
 Remove-Item -Force out.mp4
 
